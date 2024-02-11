@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: transparent;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transform: translateY(0px);
+  transition: all 0.3s;
+  font-size: larger;
+  z-index: 50;
+}
+
+#backToTopBtn:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s;
+}
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: color, background-color var(--transition-duration);
+}
+
+.theme svg {
+  transition: stroke var(--transition-duration);
+  stroke: var(--text);
+}
+
+.theme .moon-icon {
+  stroke-dasharray: 0px 1px;
+  opacity: 0;
+  transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+}
+
+.theme .sun-icon {
+  stroke-dasharray: 1px 1px;
+  opacity: 1;
+  transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+}
+
+.theme.dark .moon-icon {
+  stroke-dasharray: 1px 1px;
+  opacity: 1;
+}
+
+.theme.dark .sun-icon {
+  stroke-dasharray: 0px 1px;
+  opacity: 0;
+}
+.fill {
+  margin: 20px auto;
+  width: fit-content;
+  text-align: center;
+  font-size: 140px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px black;
+  position: relative;
+  cursor: pointer;
+}
+.fill::before {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0px;
+  -webkit-text-fill-color: #34e7e4;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.fill:hover::before {
+  width: 100%;
+}
+.theme {
+  --transition-duration: 400ms;
+  --text: #333;
+}
+
+.theme.dark {
+  --text: white;
+}
+/* mesh css */
+.shape1 {
+  animation: one 10s infinite;
+}
+.shape2 {
+  animation: two 10s infinite;
+}
+
+@keyframes one {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: -100px;
+    top: 70px;
+  }
+  50% {
+    left: 20px;
+    top: 150px;
+  }
+  75% {
+    left: 50px;
+    top: 100px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes two {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 50px;
+    top: 10px;
+  }
+  50% {
+    left: 100px;
+    top: 50px;
+  }
+  75% {
+    left: 50px;
+    top: 100px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+.bg-blur {
+  filter: blur(90px);
+}
+/* Define the styles for the scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Color of the scrollbar track */
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 6px; /* Rounded corners of the scrollbar handle */
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+
+.onlyForAdmin {
+  display: none;
+}
+
+.security {
+  background: linear-gradient(to bottom, #00000099, #00000099),
+    url("./assets/security.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+canvas{
+  width: 25vw;
+}
