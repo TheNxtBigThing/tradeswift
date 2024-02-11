@@ -49,3 +49,7 @@ Nishant, Harsh, Sonia, Ankesh
 
 ### Statistics Page
   ![stats](https://github.com/TheNxtBigThing/tradeswift/assets/68807845/9a2cc065-bffd-40a2-8368-3d9867c25346)
+
+### MongoDB
+![WhatsApp Image 2024-02-11 at 09 33 06_ba58ce7a](https://github.com/TheNxtBigThing/tradeswift/assets/68807845/ecbbfcae-4195-44cf-a54f-fdebc1f319e7)
+![WhatsApp Image 2024-02-11 at 09 33 37_a8db81a1](https://github.com/TheNxtBigThing/tradeswift/assets/68807845/8c397cef-210e-4f50-812c-1986558fed1c)
